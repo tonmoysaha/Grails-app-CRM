@@ -5,4 +5,7 @@ class GlobalConfig {
         ADMINISTRATOR: 'ADMINISTRATOR',
         REGULAR_USER: 'REGULAR_USER',
     ]
+    public static Integer itemPerPage(){
+        return 5;
+    }
 }

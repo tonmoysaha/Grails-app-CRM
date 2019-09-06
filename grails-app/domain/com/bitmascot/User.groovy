@@ -16,6 +16,7 @@ class User {
     Date dateCreated
     Date dateUpdated
     String memberType = GlobalConfig.USER_TYPE.REGULAR_USER
+
     static constraints = {
         email(email: true, nullable: false, unique: true, blank: false)
         password(blank: false)
