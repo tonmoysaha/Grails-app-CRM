@@ -5,35 +5,31 @@ class User {
     String firstName
     String lastName
     String email
-    String address
-    String phone
-    String birthdate
     String password
+    String userType = GlobalConfig.USER_TYPE.REGULAR_USER
     String identityHash
+    String birthdate
     Long identityHashLastUpdate
-    Boolean isActive =true
+    Boolean isActive = true
 
     Date dateCreated
-    Date dateUpdated
-    String memberType = GlobalConfig.USER_TYPE.REGULAR_USER
+    Date lastUpdated
 
     static constraints = {
         email(email: true, nullable: false, unique: true, blank: false)
         password(blank: false)
-        firstName(nullable: true)
         lastName(nullable: true)
-        phone(nullable: true)
-        address(nullable: true)
-        birthdate(nullable: true)
         identityHash(nullable: true)
+        birthdate(nullable: true)
         identityHashLastUpdate(nullable: true)
     }
 
-    def beforeInsert(){
-        this.password = this.password.encodeAsMD5() ;
-    }
-    def beforeUpdate(){
-        this.password = this.password.encodeAsMD5();
+    def beforeInsert (){
+        this.password = this.password.encodeAsMD5()
     }
 
+
+    def beforeUpdate(){
+        this.password = this.password.encodeAsMD5()
+    }
 }
