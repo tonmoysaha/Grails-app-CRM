@@ -6,16 +6,16 @@
 --%>
 
 <meta name="layout" content="public"/>
-
+<asset:stylesheet src="login.css"/>
 <div id="global-wrapper">
     <div id="content-wrapper">
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 col-md-4 mx-auto">
-                    <h1 class="text-center login-title">Contacts Book Member Login</h1>
 
                     <div class="account-wall">
                         <g:img dir="images" file="bitmascot.png" class="profile-img"/>
+                        <h1 class="text-center login-title">Login panel</h1>
                         <g:form controller="authentication" action="doLogin"/>
                         <g:textField name="email" class="form-control" placeholder="Email" required="required"/>
                         <g:passwordField name="password" class="form-control" placeholder="Password"
