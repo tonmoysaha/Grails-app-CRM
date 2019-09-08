@@ -4,6 +4,8 @@ class User {
     Integer id
     String firstName
     String lastName
+    String phone
+    String address
     String email
     String password
     String userType = GlobalConfig.USER_TYPE.REGULAR_USER
@@ -19,9 +21,14 @@ class User {
         email(email: true, nullable: false, unique: true, blank: false)
         password(blank: false)
         lastName(nullable: true)
+        address(nullable: true)
+        firstName(nullable: true)
         identityHash(nullable: true)
         birthdate(nullable: true)
         identityHashLastUpdate(nullable: true)
+        phone(nullable: true)
+
+
     }
 
     def beforeInsert (){

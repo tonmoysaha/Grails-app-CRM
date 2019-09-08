@@ -14,6 +14,10 @@
 </div>
 
 <div class="form-group">
+    <label><g:message code="address"/></label>
+    <g:textField name="address" class="form-control" value="${user?.address}" placeholder="Please address"/>
+</div>
+<div class="form-group">
     <label><g:message code="email.address"/> *</label>
     <g:field type="email" name="email" class="form-control" value="${user?.email}" placeholder="Please Enter Email"/>
 </div>
