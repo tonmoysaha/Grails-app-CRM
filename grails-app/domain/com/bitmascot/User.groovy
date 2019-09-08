@@ -4,6 +4,7 @@ class User {
     Integer id
     String firstName
     String lastName
+    String name = firstName + " "+lastName
     String phone
     String address
     String email

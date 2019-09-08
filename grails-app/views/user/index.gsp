@@ -51,8 +51,7 @@
             <tbody>
             <g:each in="${userList}" var="user">
                 <tr>
-                    <td>${user?.firstName}</td>
-                    <td>${user?.lastName}</td>
+                    <td>${user?.name}</td>
                     <td>${user?.email}</td>
                     <td>${user?.birthdate}</td>
 
