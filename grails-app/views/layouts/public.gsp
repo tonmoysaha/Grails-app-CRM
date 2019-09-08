@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <asset:link rel="icon" href="favicon.ico" type="image/x-ico"/>
     <asset:stylesheet src="application.css"/>
+    <asset:stylesheet src="login.css"/>
     <g:layoutHead/>
 </head>
 
@@ -26,23 +27,7 @@
 </header>
 
 
-<div class="container-fluid">
-    <div class="row">
-
-
-        <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">
-            <ul class="list-group">
-                <li class="list-group-item"><a href="#">Profile</a></li>
-                <li class="list-group-item"><a href="#">change password</a></li>
-            </ul>
-        </nav>
-
-
-        <main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3">
-            <g:layoutBody/>
-        </main>
-    </div>
-</div>
+<g:layoutBody/>
 
 
 <asset:javascript src="application.js"/>
