@@ -41,8 +41,7 @@
         <table class="table table-bordered">
             <thead class="thead-dark">
             <tr>
-                <g:sortableColumn property="firstName" title="${g.message(code: "first.name")}"/>
-                <g:sortableColumn property="lastName" title="${g.message(code: "last.name")}"/>
+                <g:sortableColumn property="name" title="${g.message(code: "name")}"/>
                 <g:sortableColumn property="email" title="${g.message(code: "email")}"/>
                 <g:sortableColumn property="birthdate" title="${g.message(code: "birthdate")}"/>
                 <th class="action-row"><g:message code="action"/></th>

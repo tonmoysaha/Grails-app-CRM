@@ -4,7 +4,7 @@ class User {
     Integer id
     String firstName
     String lastName
-    String name = firstName + " "+lastName
+    String name = this.firstName + " "+ this.lastName
     String phone
     String address
     String email
@@ -24,6 +24,7 @@ class User {
         lastName(nullable: true)
         address(nullable: true)
         firstName(nullable: true)
+        name(nullable: true)
         identityHash(nullable: true)
         birthdate(nullable: true)
         identityHashLastUpdate(nullable: true)
