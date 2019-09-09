@@ -1,6 +1,7 @@
 package com.bitmascot.user
 
 import com.bitmascot.AppUtil
+import com.bitmascot.GlobalConfig
 import com.bitmascot.User
 
 
@@ -37,5 +38,13 @@ public static final String AUTHORIZED = "AUTHORIZED";
         def user = getUser()
         return "${user.fristName} ${user.lastName}"
     }
+    def isAdministration(){
+        def user = getUser()
+        if (user && user.userType == GlobalConfig.USER_TYPE.ADMINISTRATOR){
+            return  true
+        }
+        return  false
+    }
+
 
 }

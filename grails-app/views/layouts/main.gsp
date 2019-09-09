@@ -22,6 +22,7 @@
                 aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+        <UIHelper:memberActionMenu/>
     </nav>
 </header>
 
