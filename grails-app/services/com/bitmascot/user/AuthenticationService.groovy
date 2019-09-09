@@ -36,11 +36,18 @@ public static final String AUTHORIZED = "AUTHORIZED";
     }
     def getUserName(){
         def user = getUser()
-        return "${user.fristName} ${user.lastName}"
+        return "${user.firstName} ${user.lastName}"
     }
     def isAdministration(){
         def user = getUser()
         if (user && user.userType == GlobalConfig.USER_TYPE.ADMINISTRATOR){
+            return  true
+        }
+        return  false
+    }
+    def isRegularUser(){
+        def user = getUser()
+        if (user && user.userType == GlobalConfig.USER_TYPE.REGULAR_USER){
             return  true
         }
         return  false

@@ -1,9 +1,12 @@
 package com.bitmascot.controller
 
+import com.bitmascot.User
+import com.bitmascot.user.AuthenticationService
 import com.bitmascot.user.UserService
 
 class UserController {
     UserService userService
+    AuthenticationService authenticationService
 
     def index() {
         def response = userService.list(params)
@@ -15,6 +18,15 @@ class UserController {
         if (!response){
             redirect(controller: "user", action: "index")
         }else{
+            [user: response]
+        }
+    }
+
+    def show(){
+        def response = authenticationService.isRegularUser()
+        if (!response){
+            redirect(controller: "user" , action: "index")
+        }else {
             [user: response]
         }
     }

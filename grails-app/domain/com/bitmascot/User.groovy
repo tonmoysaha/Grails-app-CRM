@@ -4,7 +4,7 @@ class User {
     Integer id
     String firstName
     String lastName
-    String name = this.firstName + " "+ this.lastName
+    String name = this.getFirstName() +" "+this.getLastName()
     String phone
     String address
     String email
@@ -40,5 +40,9 @@ class User {
 
     def beforeUpdate(){
         this.password = this.password.encodeAsMD5()
+    }
+
+    def fullName(){
+        this.name = getFirstName()+getLastName()
     }
 }
