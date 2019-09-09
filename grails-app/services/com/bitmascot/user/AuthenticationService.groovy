@@ -56,6 +56,10 @@ public static final String AUTHORIZED = "AUTHORIZED";
         }
         return  false
     }
+    def userPassword(){
+        def user = getUser()
+        return "${user.password}"
+    }
 
 
 }

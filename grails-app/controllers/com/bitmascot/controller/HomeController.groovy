@@ -21,7 +21,7 @@ class HomeController {
     }
 
     def editpassword() {
-            def response = authenticationService.getUser()
+            def response = authenticationService.userPassword().decodeMD5()
 
             if (!response) {
                 redirect(controller: "user", action: "index")
@@ -32,17 +32,13 @@ class HomeController {
 
     def updatepassword() {
         def response = authenticationService.getUser()
-        if (!response) {
-            redirect(controller: "home", action: "index")
-        } else {
-            response.password = params.newPassword
-            response = userService.update(response, params)
-            if (!response.isSuccess) {
-                flash.redirectParams = response.model
-                redirect(controller: "user", action: "editpassword")
-            } else {
-                redirect(controller: "user", action: "index")
-            }
+        response = userService.resetpassword(response, params.newPassword)
+        if (!response.isSuccess){
+            flash.redirectParams = response.model
+            redirect(controller: "user", action: "edit")
+        }else{
+            redirect(controller: "user", action: "index")
         }
+
     }
 }

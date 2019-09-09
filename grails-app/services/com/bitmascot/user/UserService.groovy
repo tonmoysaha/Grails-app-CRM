@@ -37,17 +37,17 @@ class UserService {
         return User.get(id)
     }
 
-//    def resetpassword(User user,GrailsParameterMap params){
-//        user.password = params
-//        def response = AppUtil.saveResponse(false, user)
-//        if (user.validate()) {
-//            user.save(flush: true)
-//            if (!user.hasErrors()){
-//                response.isSuccess = true
-//            }
-//        }
-//        return response
-//    }
+    def resetpassword(User user,GrailsParameterMap params){
+        user.password = params
+        def response = AppUtil.saveResponse(false, user)
+        if (user.validate()) {
+            user.save(flush: true)
+            if (!user.hasErrors()){
+                response.isSuccess = true
+            }
+        }
+        return response
+    }
 
 
 
