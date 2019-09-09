@@ -42,7 +42,4 @@ class User {
         this.password = this.password.encodeAsMD5()
     }
 
-    def fullName(){
-        this.name = getFirstName()+getLastName()
-    }
 }

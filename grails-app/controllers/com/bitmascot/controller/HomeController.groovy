@@ -22,6 +22,7 @@ class HomeController {
 
     def editpassword() {
             def response = authenticationService.getUser()
+
             if (!response) {
                 redirect(controller: "user", action: "index")
             } else {
@@ -38,7 +39,7 @@ class HomeController {
             response = userService.update(response, params)
             if (!response.isSuccess) {
                 flash.redirectParams = response.model
-                redirect(controller: "user", action: "edit")
+                redirect(controller: "user", action: "editpassword")
             } else {
                 redirect(controller: "user", action: "index")
             }

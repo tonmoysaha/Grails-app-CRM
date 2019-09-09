@@ -7,10 +7,7 @@
 
 <meta name="layout" content="main"/>
 
-<div class="card">
-    <div class="card-header">
-        <g:message code="user" args="['Create']"/>
-    </div>
+
 
     <div class="container">
         <div class="row">
