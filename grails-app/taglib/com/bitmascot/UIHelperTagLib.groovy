@@ -10,6 +10,7 @@ class UIHelperTagLib {
         out << g.link(class:"nav-link dropdown-toggle", "data-toggle":"dropdown"){authenticationService.getUserName()}
         out << '<div class="dropdown-menu">'
         out << g.link(controller: "authentication", action: "logout", class: "dropdown-item"){g.message(code:"logout")}
+        out << g.link(controller: "home", action: "editpassword", class: "dropdown-item"){g.message(code:"forget.password")}
         out << "</div></li>"
     }
     def leftNavigation = { attrs, body ->
