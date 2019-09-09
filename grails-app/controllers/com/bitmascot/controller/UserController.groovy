@@ -24,7 +24,7 @@ class UserController {
 
     def show(){
        Integer id = authenticationService.getUserId()
-        def response  = userService.getById(id)
+        def response  = userService.find(id)
         if (!response){
             redirect(controller: "user", action: "index")
         }else {
@@ -32,6 +32,7 @@ class UserController {
         }
 
         }
+
 
 
     def create() {

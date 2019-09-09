@@ -37,6 +37,12 @@ class UserService {
         return User.get(id)
     }
 
+    def find(Integer id){
+        User user = User.findAllById(id)
+        return user
+
+    }
+
 
     def list(GrailsParameterMap params) {
         params.max = params.max ?: GlobalConfig.itemsPerPage()
