@@ -23,7 +23,7 @@ class UserController {
     }
 
     def show(){
-        def response = authenticationService.isRegularUser()
+        def response = authenticationService.getUser()
         if (!response){
             redirect(controller: "user" , action: "index")
         }else {
