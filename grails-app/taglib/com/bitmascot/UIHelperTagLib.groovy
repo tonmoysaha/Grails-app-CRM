@@ -19,7 +19,7 @@ class UIHelperTagLib {
             navigations.add([controller: "user", action: "index", name: "user"])
         }
         if (authenticationService.isRegularUser()){
-            navigations.add([controller: "user", action: "show", name: "My Profile"])
+            navigations.add([controller: "home", action: "show", name: "My Profile"])
 
         }
 

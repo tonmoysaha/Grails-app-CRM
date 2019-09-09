@@ -22,19 +22,6 @@ class UserController {
         }
     }
 
-    def show(){
-       Integer id = authenticationService.getUserId()
-        def response  = userService.find(id)
-        if (!response){
-            redirect(controller: "user", action: "index")
-        }else {
-            [user: response]
-        }
-
-        }
-
-
-
     def create() {
         [user: flash.redirectParams]
     }
