@@ -40,8 +40,9 @@
 
                         <div class="form-group">
                             <label><g:message code="birthdate"/></label>
-                            <g:textField name="birthdate" class="form-control" value="${user?.birthdate}"
+                            <g:textField name="birthdate" class="form-control js-datepicker"  value="${user?.birthdate}"
                                          placeholder="Please birthdate"/>
+                            <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                         </div>
 
                         <g:if test="${!edit}">
