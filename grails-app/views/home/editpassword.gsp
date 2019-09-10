@@ -21,9 +21,7 @@
                         <label>Previous Password</label>
 
                         <div class="form-group pass_show">
-                            <g:passwordField name="password" class="form-control"
-                                             placeholder="Please Enter Password"/>
-                        </div>
+l,zlmodfz                        </div>
 
                         <label>New Password</label>
 

@@ -7,6 +7,7 @@
 //
 //= require jquery-3.3.1.min
 //= require bootstrap
+//= require bitmascot
 //= require popper.min
 //= require jquery-confirm.min
 //= require daterangepicker
