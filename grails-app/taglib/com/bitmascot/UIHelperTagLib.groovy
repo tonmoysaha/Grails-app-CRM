@@ -10,7 +10,11 @@ class UIHelperTagLib {
         out << g.link(class:"nav-link dropdown-toggle", "data-toggle":"dropdown"){authenticationService.getUserName()}
         out << '<div class="dropdown-menu">'
         out << g.link(controller: "authentication", action: "logout", class: "dropdown-item"){g.message(code:"logout")}
-        out << g.link(controller: "home", action: "editpassword", class: "dropdown-item"){g.message(code:"forget.password")}
+        if (authenticationService.isRegularUser()) {
+            out << g.link(controller: "home", action: "editpassword", class: "dropdown-item") {
+                g.message(code: "forget.password")
+            }
+        }
         out << "</div></li>"
     }
     def leftNavigation = { attrs, body ->
@@ -21,6 +25,7 @@ class UIHelperTagLib {
         }
         if (authenticationService.isRegularUser()){
             navigations.add([controller: "home", action: "show", name: "My Profile"])
+            navigations.add([controller: "home" , action: "editpassword", name: "Forget Passsword"])
 
         }
 
@@ -30,5 +35,6 @@ class UIHelperTagLib {
             out << '</li>'
         }
     }
+
 
 }

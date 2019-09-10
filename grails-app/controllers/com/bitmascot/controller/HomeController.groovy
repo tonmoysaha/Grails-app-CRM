@@ -35,7 +35,7 @@ class HomeController {
         def response = authenticationService.getUser()
         String password = params.password
         password=password.encodeAsMD5()
-        if (authenticationService.userPassword() == password){
+        if (authenticationService.getUserPassword() == password){
             response = userService.resetpassword(response,params.newPassword)
             if (!response.isSuccess){
                 redirect(controller: "home", action: "editpassword")

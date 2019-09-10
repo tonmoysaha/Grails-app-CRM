@@ -55,7 +55,7 @@ class UserService {
         params.max = params.max ?: GlobalConfig.itemsPerPage()
         List<User> userList = User.createCriteria().list(params) {
             if (params.query){
-                ilike("firstName", "%{params.query}%")
+                ilike("firstName", "%${params.query}%")
             }
             if (!params.sort) {
                 order("id", "desc")

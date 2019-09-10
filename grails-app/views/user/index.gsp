@@ -27,11 +27,6 @@
                 </g:form>
             </div>
 
-            %{--Create and Reload Panel--}%
-            <div class="btn-group">
-                <g:link controller="user" action="create" class="btn btn-success"><g:message code="create"/></g:link>
-                <g:link controller="user" action="index" class="btn btn-primary"><g:message code="reload"/></g:link>
-            </div>
         </span>
     </div>
 
@@ -50,7 +45,7 @@
             <g:each in="${userList}" var="user">
                 <tr>
                     <td>${user?.firstName}
-                     &nbsp; &nbsp; ${user?.lastName}</td>
+                     &nbsp; ${user?.lastName}</td>
                     <td>${user?.email}</td>
                     <td>${user?.birthdate}</td>
 

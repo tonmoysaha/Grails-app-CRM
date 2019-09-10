@@ -8,7 +8,7 @@
 <meta name="layout" content="main"/>
 
 
-
+<div class="">
     <div class="container">
         <div class="row">
             <div class="col-sm-4">
