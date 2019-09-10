@@ -58,63 +58,6 @@ h1 {
 }
 .pass_show .ptxt:hover{color: #333333;}
 
-.input-icon {
-    position: absolute;
-    font-size: 18px;
-    color: #ccc;
-    right: 8px;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
-    cursor: pointer;
-}
 
-td.active {
-    background-color: #2c6ed5;
-}
 
-input[type="date" i] {
-    padding: 14px;
-}
 
-.table-condensed td, .table-condensed th {
-    font-size: 14px;
-    font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
-    font-weight: 400;
-}
-
-.daterangepicker td {
-    width: 40px;
-    height: 30px;
-}
-
-.daterangepicker {
-    border: none;
-    -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
-    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
-    display: none;
-    border: 1px solid #e0e0e0;
-    margin-top: 5px;
-}
-
-.daterangepicker::after, .daterangepicker::before {
-    display: none;
-}
-
-.daterangepicker thead tr th {
-    padding: 10px 0;
-}
-
-.daterangepicker .table-condensed th select {
-    border: 1px solid #ccc;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    font-size: 14px;
-    padding: 5px;
-    outline: none;
-}

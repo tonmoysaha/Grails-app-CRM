@@ -46,7 +46,7 @@ class User {
     }
     def userAge (){
         LocalDate today = LocalDate.now()
-        LocalDate birthday = LocalDate.of(this.birthdate)
+        LocalDate birthday = LocalDate.of()
         Period period = Period.between(birthdate,today)
         this.age = period.years
     }
