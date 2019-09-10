@@ -14,7 +14,7 @@ class User {
     String password
     String userType = GlobalConfig.USER_TYPE.REGULAR_USER
     String identityHash
-    Date birthdate
+    String birthdate
     Long identityHashLastUpdate
     Boolean isActive = true
 

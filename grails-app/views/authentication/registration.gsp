@@ -9,9 +9,6 @@
 <meta name="layout" content="public"/>
 
 <div class="card">
-    <div class="card-header">
-        User Registration
-    </div>
     <div class="card-body">
         <g:form controller="authentication" action="doRegistration" class="form-horizontal" role="form">
             <g:render template="/user/form"/>
