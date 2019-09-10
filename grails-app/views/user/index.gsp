@@ -19,8 +19,7 @@
             <div class="btn-group">
                 <g:form controller="user" action="index" method="GET">
                     <div class="input-group" id="search-area">
-                        <g:select name="colName" class="form-control" from="[firstName: 'First Name', lastName: 'Last Name', email: 'Email']" value="${params?.colName}" optionKey="key" optionValue="value"/>
-                        <g:textField name="colValue" class="form-control" value="${params?.colValue}"/>
+                        <g:textField name="query" class="form-control" value="${params.query}"/>
                         <span class="input-group-btn">
                             <button class="btn btn-default" type="submit">Search</button>
                         </span>
@@ -41,7 +40,7 @@
         <table class="table table-bordered">
             <thead class="thead-dark">
             <tr>
-                <g:sortableColumn property="name" title="${g.message(code: "name")}"/>
+                <g:sortableColumn property="firstName" title="${g.message(code: "firstName")}"/>
                 <g:sortableColumn property="email" title="${g.message(code: "email")}"/>
                 <g:sortableColumn property="birthdate" title="${g.message(code: "birthdate")}"/>
                 <th class="action-row"><g:message code="action"/></th>
@@ -50,7 +49,8 @@
             <tbody>
             <g:each in="${userList}" var="user">
                 <tr>
-                    <td>${user?.name}</td>
+                    <td>${user?.firstName}
+                     &nbsp; &nbsp; ${user?.lastName}</td>
                     <td>${user?.email}</td>
                     <td>${user?.birthdate}</td>
 

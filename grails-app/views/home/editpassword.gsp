@@ -16,7 +16,7 @@
                     <label>Current Password</label>
 
                     <div class="form-group pass_show">
-                        <g:passwordField name="password" class="form-control" value="${user?.password}"
+                        <g:passwordField name="password" class="form-control"
                                          placeholder="Please Enter Password"/>
                     </div>
                     <label>New Password</label>

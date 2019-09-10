@@ -1,5 +1,6 @@
 package com.bitmascot.controller
 
+import com.bitmascot.User
 import com.bitmascot.user.AuthenticationService
 import com.bitmascot.user.UserService
 
@@ -21,7 +22,7 @@ class HomeController {
     }
 
     def editpassword() {
-            def response = authenticationService.userPassword().decodeMD5()
+            def response = authenticationService.getUser()
 
             if (!response) {
                 redirect(controller: "user", action: "index")
@@ -32,13 +33,20 @@ class HomeController {
 
     def updatepassword() {
         def response = authenticationService.getUser()
-        response = userService.resetpassword(response, params.newPassword)
-        if (!response.isSuccess){
-            flash.redirectParams = response.model
-            redirect(controller: "user", action: "edit")
-        }else{
-            redirect(controller: "user", action: "index")
+        String password = params.password
+        password=password.encodeAsMD5()
+        if (authenticationService.userPassword() == password){
+            response = userService.resetpassword(response,params.newPassword)
+            if (!response.isSuccess){
+                redirect(controller: "home", action: "editpassword")
+            }else{
+                redirect(controller: "home", action: "index")
+            }
         }
+        else {
+            redirect(controller: "home", action: "editpassword")
+        }
+
 
     }
 }

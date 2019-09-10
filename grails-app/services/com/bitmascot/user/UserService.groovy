@@ -37,7 +37,7 @@ class UserService {
         return User.get(id)
     }
 
-    def resetpassword(User user,GrailsParameterMap params){
+    def resetpassword(User user, params){
         user.password = params
         def response = AppUtil.saveResponse(false, user)
         if (user.validate()) {
@@ -54,8 +54,8 @@ class UserService {
     def list(GrailsParameterMap params) {
         params.max = params.max ?: GlobalConfig.itemsPerPage()
         List<User> userList = User.createCriteria().list(params) {
-            if (params?.colName && params?.colValue) {
-                like(params.colName, "%" + params.colValue + "%")
+            if (params.query){
+                ilike("firstName", "%{params.query}%")
             }
             if (!params.sort) {
                 order("id", "desc")
