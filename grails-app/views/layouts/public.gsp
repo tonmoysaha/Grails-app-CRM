@@ -9,8 +9,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <asset:link rel="icon" href="favicon.ico" type="image/x-ico"/>
     <asset:stylesheet src="application.css"/>
-    <asset:stylesheet src="login.css"/>
     <asset:javascript src="application.js"/>
+    <asset:javascript src="bitmascot.js"/>
+    <asset:stylesheet src="login.css"/>
+    <asset:stylesheet src="daterangepicker.css"/>
+    <asset:stylesheet src="style.css"/>
+    <asset:stylesheet src="mdi-font/css/material-design-iconic-font"/>
+    <asset:stylesheet src="mdi-font/css/material-design-iconic-font.min"/>
+    <asset:javascript src="daterangepicker.js"/>
+    <asset:javascript src="moment.min.js"/>
+    <asset:javascript src="jquery.js"/>
+    <asset:javascript src="jquery.min.js"/>
+
+
     <g:layoutHead/>
 </head>
 

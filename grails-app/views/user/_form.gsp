@@ -1,7 +1,11 @@
+
 <div class="form-group">
-    <label class="col-sm-3 con"><g:message code="birthdate"/></label>
-<div class="input-append date form_datetime col-sm-9">
-    <g:textField name="birthdate" class="form-control" value="${user?.birthdate}" placeholder="Please birthdate"/>
-    <span class="add-on"><i class="icon-th"></i></span>
+ <label class="col-sm-3 control-label">First Name</label>
+    <div class="col-sm-9">
+<div class="input-group date" data-provide="datepicker">
+    <input type="text" class="form-control js-datepicker">
+    <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+
 </div>
+        </div>
 </div>
