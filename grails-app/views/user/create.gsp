@@ -18,7 +18,7 @@
     %{--Partial Templating--}%
         <g:render template="form"/>
         <div class="form-action-panel">
-            <div class="row row-space justify-content-center mt-3">
+          <div class="row row-space justify-content-center mt-3">
              <div class="col-2">
         <g:submitButton class="btn btn-primary" name="save" value="${g.message(code: "save")}"/>
         </div>
@@ -27,5 +27,6 @@
         </div>
         </div>
     </g:form>
+</div>
 </div>
 </div>

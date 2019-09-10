@@ -11,9 +11,11 @@
 *= require style
 *= require daterangepicker
 *= require font-awesome/css/all.min
+*= require font-awesome/css/font-awesome
+*= require font-awesome/css/font-awesome.min
 *= require jquery-confirm.min
-*= require material-design-iconic-font
-*= require material-design-iconic-font.min
+*= require mdi-font/css/material-design-iconic-font
+*= require mdi-font/css/material-design-iconic-font.min
 *= require_self
 
 */
