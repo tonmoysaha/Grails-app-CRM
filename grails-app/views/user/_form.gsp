@@ -1,4 +1,4 @@
-<div class="body justify-content-center">
+<div class="text-center" style="padding: 50px 0">
     <div class="col-sm-6 col-md-4 mx-auto">
 
         <g:img dir="images" file="bitmascot.png" class="profile-img"/>

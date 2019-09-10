@@ -14,14 +14,13 @@
     </div>
 
     <div class="card-body ">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-4">
+
+                <div class="col-sm-6 col-md-4 mx-auto">
                     <g:form controller="home" action="updatepassword">
 
                         <div class="form-group">
                             <label class="col-sm-3 control-label">Previous Password</label>
-                            <div class="col-sm-9">
+                            <div class="col-sm-9 ">
                                 <g:passwordField name="password" class="form-control"/>
                             </div>
                         </div>
@@ -61,5 +60,3 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>

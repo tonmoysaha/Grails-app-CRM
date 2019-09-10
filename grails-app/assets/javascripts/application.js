@@ -9,7 +9,6 @@
 //= require bootstrap
 //= require bitmascot
 //= require popper.min
-//= require jquery-confirm.min
 //= require daterangepicker
 //= require moment.min
 //= require_self

@@ -10,12 +10,13 @@
 *= require bootstrap
 *= require style
 *= require daterangepicker
+*= require bootstrap
+*= require bootstrap.min
+*= require bootstrap-reboot
+*= require bootstrap-reboot
 *= require font-awesome/css/all.min
 *= require font-awesome/css/font-awesome
 *= require font-awesome/css/font-awesome.min
-*= require jquery-confirm.min
-*= require mdi-font/css/material-design-iconic-font
-*= require mdi-font/css/material-design-iconic-font.min
 *= require_self
 
 */
