@@ -1,6 +1,5 @@
+<div id="global-wrapper">
 <div class="container">
-
-
         <div class="account-wall">
             <g:img dir="images" file="bitmascot.png" class="profile-img"/>
             <h1 class="text-center login-title">Registration panel</h1>
@@ -35,12 +34,15 @@
                          placeholder="Please Enter Email"/>
             </div>
 
-            <div class="form-group">
-                <label><g:message code="birthdate"/></label>
-                <g:textField name="birthdate" class="form-control js-datepicker" value="${user?.birthdate}"
-                             placeholder="Please birthdate"/>
-                <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+            <div class="row row-space">
+
+                    <div class="input-group">
+                        <input class="input--style-1 js-datepicker" type="text" placeholder="BIRTHDATE" name="birthday">
+                        <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                    </div>
+
             </div>
+
 
             <g:if test="${!edit}">
                 <div class="form-group">
@@ -52,6 +54,6 @@
 
         </div>
     </div>
-
+</div>
 
 

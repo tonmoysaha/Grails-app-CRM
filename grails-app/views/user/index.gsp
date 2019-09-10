@@ -38,6 +38,7 @@
                 <g:sortableColumn property="firstName" title="${g.message(code: "firstName")}"/>
                 <g:sortableColumn property="email" title="${g.message(code: "email")}"/>
                 <g:sortableColumn property="birthdate" title="${g.message(code: "birthdate")}"/>
+                <g:sortableColumn property="phone" title="${g.message(code: "phone")}"/>
                 <th class="action-row"><g:message code="action"/></th>
             </tr>
             </thead>
@@ -48,15 +49,11 @@
                      &nbsp; ${user?.lastName}</td>
                     <td>${user?.email}</td>
                     <td>${user?.birthdate}</td>
+                    <td>+88${user?.phone}</td>
+
 
                     %{--Table Actions --}%
-                    <td>
-                        <div class="btn-group">
-                            <g:link controller="user" action="details" class="btn btn-secondary" id="${user.id}"><i class="fas fa-eye"></i></g:link>
-                            <g:link controller="user" action="edit" class="btn btn-secondary" id="${user.id}"><i class="fas fa-edit"></i></g:link>
-                            <g:link controller="user" action="delete" id="${user.id}" class="btn btn-secondary delete-confirmation"><i class="fas fa-trash"></i></g:link>
-                        </div>
-                    </td>
+
                 </tr>
             </g:each>
             </tbody>

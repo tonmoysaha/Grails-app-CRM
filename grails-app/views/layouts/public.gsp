@@ -10,6 +10,7 @@
     <asset:link rel="icon" href="favicon.ico" type="image/x-ico"/>
     <asset:stylesheet src="application.css"/>
     <asset:stylesheet src="login.css"/>
+    <asset:javascript src="application.js"/>
     <g:layoutHead/>
 </head>
 
@@ -29,8 +30,6 @@
 
 <g:layoutBody/>
 
-
-<asset:javascript src="application.js"/>
 
 </body>
 </html>

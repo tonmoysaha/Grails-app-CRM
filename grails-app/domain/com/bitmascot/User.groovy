@@ -1,5 +1,8 @@
 package com.bitmascot
 
+import java.time.LocalDate
+import java.time.Period
+
 class User {
     Integer id
     String firstName
@@ -7,10 +10,11 @@ class User {
     String phone
     String address
     String email
+    Integer age
     String password
     String userType = GlobalConfig.USER_TYPE.REGULAR_USER
     String identityHash
-    String birthdate
+    Date birthdate
     Long identityHashLastUpdate
     Boolean isActive = true
 
@@ -25,6 +29,7 @@ class User {
         firstName(nullable: true)
         identityHash(nullable: true)
         birthdate(nullable: true)
+        age(nullable: true)
         identityHashLastUpdate(nullable: true)
         phone(nullable: true)
 
@@ -38,6 +43,12 @@ class User {
 
     def beforeUpdate(){
         this.password = this.password.encodeAsMD5()
+    }
+    def userAge (){
+        LocalDate today = LocalDate.now()
+        LocalDate birthday = LocalDate.of(this.birthdate)
+        Period period = Period.between(birthdate,today)
+        this.age = period.years
     }
 
 }
