@@ -17,21 +17,33 @@
                         <g:img dir="images" file="bitmascot.png" class="profile-img"/>
                         <h1 class="text-center login-title">Login panel</h1>
                         <g:form controller="authentication" action="doLogin">
-                            <g:textField name="email" class="form-control" placeholder="Email" required="required"/>
-                            <g:passwordField name="password" class="form-control" placeholder="Password"
-                                             required="required"/>
-                            <div class="row row-space">
+                            <div class="form-group">
+                                <g:textField name="email" class="form-control" placeholder="Enter Email" required="required"/>
+                            </div>
+
+                            <div class="form-group">
+                                <g:passwordField name="password" class="form-control" placeholder="Enter Password"
+                                                 required="required"/>
+                            </div>
+
+                            <div class="row row-space justify-content-center mt-3">
+
                                 <div class="col-2">
                                     <g:submitButton name="login" value="login" class="btn btn-primary btn-md"/>
                                 </div>
 
                                 <div class="col-2">
                                     <g:link controller="authentication" class="btn btn-primary btn-md"
-                                            action="registration">Registration</g:link>
+                                            action="login">Clear</g:link>
                                 </div>
                             </div>
-
                         </g:form>
+                        <div class="mt-4">
+                            <div class="d-flex justify-content-center links">
+                                Are you new here?
+                                <g:link controller="authentication" action="registration">Register Now</g:link>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
