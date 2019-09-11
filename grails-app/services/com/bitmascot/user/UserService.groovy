@@ -18,7 +18,9 @@ class UserService {
         LocalDate oldDate = LocalDate.parse(user.birthdate, dateTimeFormatter)
         LocalDate today = LocalDate.now()
         Period period = Period.between(oldDate, today)
+
         user.age = period.getYears()
+        user.name = user.firstName + user.lastName
 
         def response = AppUtil.saveResponse(false, user)
         if (user.validate()) {
@@ -65,7 +67,7 @@ class UserService {
         params.max = params.max ?: GlobalConfig.itemsPerPage()
         List<User> userList = User.createCriteria().list(params) {
             if (params.query) {
-                ilike("firstName", "%${params.query}%")
+                ilike("name", "%${params.query}%")
             }
             if (!params.sort) {
                 order("id", "desc")

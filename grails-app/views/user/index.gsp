@@ -32,11 +32,11 @@
 
     %{--Table Panel--}%
     <div class="card-body">
-        <table class="table table-bordered table table-striped table-bordered table-sm" id="dtBasicExample">
-            <thead class="thead-dark">
+        <table class="table-sm">
+            <thead>
             <tr>
-                <g:sortableColumn property="firstName" class="th-sm" title="${g.message(code: "firstName")}"/>
-                <g:sortableColumn property="email" title="${g.message(code: "email")}"/>
+                <g:sortableColumn property="firstName"  title="${g.message(code: "firstName")}"/>
+                <g:sortableColumn property="email"  title="${g.message(code: "email")}"/>
                 <g:sortableColumn property="age" title="${g.message(code: "age")}"/>
                 <g:sortableColumn property="phone" title="${g.message(code: "phone")}"/>
             </tr>
