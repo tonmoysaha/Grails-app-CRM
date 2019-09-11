@@ -29,6 +29,7 @@ class AuthenticationController {
     }
     def doRegistration(){
         def response = userService.save(params)
+
         if (response.isSuccess){
             authenticationService.setUserAuthentication(response.model)
             redirect(controller: "home" ,action: "index")

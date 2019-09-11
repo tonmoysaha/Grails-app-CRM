@@ -5,14 +5,25 @@ import com.bitmascot.GlobalConfig
 import com.bitmascot.User
 import grails.web.servlet.mvc.GrailsParameterMap
 
+import java.time.LocalDate
+import java.time.Period
+import java.time.format.DateTimeFormatter
+
 class UserService {
 
     def save(GrailsParameterMap params) {
         User user = new User(params)
+
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy")
+        LocalDate oldDate = LocalDate.parse(user.birthdate, dateTimeFormatter)
+        LocalDate today = LocalDate.now()
+        Period period = Period.between(oldDate, today)
+        user.age = period.getYears()
+
         def response = AppUtil.saveResponse(false, user)
         if (user.validate()) {
             user.save(flush: true)
-            if (!user.hasErrors()){
+            if (!user.hasErrors()) {
                 response.isSuccess = true
             }
         }
@@ -25,7 +36,7 @@ class UserService {
         def response = AppUtil.saveResponse(false, user)
         if (user.validate()) {
             user.save(flush: true)
-            if (!user.hasErrors()){
+            if (!user.hasErrors()) {
                 response.isSuccess = true
             }
         }
@@ -37,12 +48,12 @@ class UserService {
         return User.get(id)
     }
 
-    def resetpassword(User user, params){
+    def resetpassword(User user, params) {
         user.password = params
         def response = AppUtil.saveResponse(false, user)
         if (user.validate()) {
             user.save(flush: true)
-            if (!user.hasErrors()){
+            if (!user.hasErrors()) {
                 response.isSuccess = true
             }
         }
@@ -50,13 +61,11 @@ class UserService {
     }
 
 
-
     def list(GrailsParameterMap params) {
         params.max = params.max ?: GlobalConfig.itemsPerPage()
         List<User> userList = User.createCriteria().list(params) {
-            if (params.query){
+            if (params.query) {
                 ilike("firstName", "%${params.query}%")
-                ilike("lastName", "%${params.query}%")
             }
             if (!params.sort) {
                 order("id", "desc")

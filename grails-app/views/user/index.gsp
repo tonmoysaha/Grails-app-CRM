@@ -37,7 +37,7 @@
             <tr>
                 <g:sortableColumn property="firstName" title="${g.message(code: "firstName")}"/>
                 <g:sortableColumn property="email" title="${g.message(code: "email")}"/>
-                <g:sortableColumn property="birthdate" title="${g.message(code: "birthdate")}"/>
+                <g:sortableColumn property="age" title="${g.message(code: "age")}"/>
                 <g:sortableColumn property="phone" title="${g.message(code: "phone")}"/>
             </tr>
             </thead>

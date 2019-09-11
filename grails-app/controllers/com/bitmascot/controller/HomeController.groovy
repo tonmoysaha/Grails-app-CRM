@@ -1,12 +1,9 @@
 package com.bitmascot.controller
 
-import com.bitmascot.User
 import com.bitmascot.user.AuthenticationService
 import com.bitmascot.user.UserService
 
-import java.time.LocalDate
-import java.time.Period
-import java.time.format.DateTimeFormatter
+
 
 class HomeController {
     AuthenticationService authenticationService
@@ -54,14 +51,5 @@ class HomeController {
 
     }
 
-    def age(){
-        User user = authenticationService.getUser()
 
-        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy")
-        LocalDate oldDate = LocalDate.parse(user.getBirthdate(),dateTimeFormatter)
-        LocalDate today = LocalDate.now()
-        Period period = Period.between(oldDate,today)
-        User user1 = new User();
-        user1.setAge(period.getYears())
-    }
 }
