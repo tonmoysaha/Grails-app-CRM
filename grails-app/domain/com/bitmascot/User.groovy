@@ -39,17 +39,17 @@ class User {
 
     def beforeInsert (){
         this.password = this.password.encodeAsMD5()
-    }
 
-
-    def beforeUpdate(){
-        this.password = this.password.encodeAsMD5()
-    }
-    def userAge (){
         Date date1 = new SimpleDateFormat("dd/MM/yyyy").parse(this.birthdate)
         LocalDate today = LocalDate.now()
+        Date currentDate = new SimpleDateFormat("dd/MM/yyyy").parse(today)
         LocalDate birthday = LocalDate.of(date1.year,date1.month,date1.day)
-        Period period = Period.between(birthday,today)
-        this.age = period.years
+        Period period = Period.between(birthday,currentDate)
+        this.age = period.getYears()
+    }
+
+
+    def beforeUpdate() {
+        this.password = this.password.encodeAsMD5()
     }
 }
