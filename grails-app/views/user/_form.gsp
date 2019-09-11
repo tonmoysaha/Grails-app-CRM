@@ -6,7 +6,7 @@
             <label class="col-sm-3 control-label"><g:message code="first.name"/> *</label>
 
             <div class="col-sm-9">
-                <g:textField name="firstName" class="form-control"/>
+                <g:textField name="firstName" class="form-control" required="required"/>
             </div>
         </div>
 
@@ -15,7 +15,7 @@
             <label class="col-sm-3 control-label"><g:message code="last.name"/></label>
 
             <div class="col-sm-9">
-                <g:textField name="lastName" class="form-control"/>
+                <g:textField name="lastName" class="form-control" required="required"/>
             </div>
         </div>
 
@@ -23,7 +23,7 @@
         <label class="col-sm-3 control-label"><g:message code="address"/></label>
 
         <div class="col-sm-9">
-            <g:textField name="address" class="form-control"/>
+            <g:textField name="address" class="form-control" required="required"/>
         </div>
     </div>
 
@@ -31,7 +31,7 @@
         <label class="col-sm-3 control-label"><g:message code="phone"/></label>
 
         <div class="col-sm-9">
-            <g:textField name="phone" class="form-control"/>
+            <g:textField name="phone" class="form-control" required="required"/>
         </div>
     </div>
 
@@ -53,7 +53,7 @@
             <label class="col-sm-3 control-label"><g:message code="email.address"/> *</label>
 
             <div class="col-sm-9">
-                <g:field type="email" name="email" class="form-control"/>
+                <g:field type="email"  name="email" class="form-control" required="required"/>
             </div>
         </div>
 
@@ -62,7 +62,7 @@
                 <label class="col-sm-3 control-label"><g:message code="password"/> *</label>
 
                 <div class="col-sm-9">
-                    <g:passwordField name="password" class="form-control"/>
+                    <g:passwordField name="password" class="form-control" required="required"/>
                 </div>
             </div>
         </g:if>

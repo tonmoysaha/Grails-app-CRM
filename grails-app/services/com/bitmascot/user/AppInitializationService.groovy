@@ -15,9 +15,9 @@ class AppInitializationService {
             user.firstName = "ma"
             user.lastName="love"
             user.email="admin@localhost.local"
-            user.password="1111"
+            user.password="admin"
             user.userType = GlobalConfig.USER_TYPE.ADMINISTRATOR
-            user.save(flash: true)
+            user
         }
     }
 }

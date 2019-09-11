@@ -21,7 +21,7 @@ class UIHelperTagLib {
         List navigations = new LinkedList()
 
         if(authenticationService.isAdministration()){
-            navigations.add([controller: "user", action: "index", name: "user"])
+            navigations.add([controller: "user", action: "index", name: "user List"])
         }
         if (authenticationService.isRegularUser()){
             navigations.add([controller: "home", action: "show", name: "My Profile"])
