@@ -7,6 +7,7 @@
 //
 //= require jquery-3.3.1.min
 //= require bootstrap
+//= require bitmascotmain
 //= require bootstrap.bundle
 //= require popper.min
 //= require_self
