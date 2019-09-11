@@ -43,17 +43,17 @@
             </thead>
             <tbody>
             <g:each in="${userList}" var="user">
+                <g:if test="${user?.userType != "ADMINISTRATOR"}">
                 <tr>
+
                     <td>${user?.firstName}
                      &nbsp; ${user?.lastName}</td>
                     <td>${user?.email}</td>
                     <td>${user?.age}</td>
                     <td>+88${user?.phone}</td>
 
-
-                    %{--Table Actions --}%
-
                 </tr>
+                </g:if>
             </g:each>
             </tbody>
         </table>
