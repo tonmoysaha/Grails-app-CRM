@@ -1,5 +1,6 @@
 package com.bitmascot
 
+import java.text.SimpleDateFormat
 import java.time.LocalDate
 import java.time.Period
 
@@ -45,10 +46,10 @@ class User {
         this.password = this.password.encodeAsMD5()
     }
     def userAge (){
+        Date date1 = new SimpleDateFormat("dd/MM/yyyy").parse(this.birthdate)
         LocalDate today = LocalDate.now()
-        LocalDate birthday = LocalDate.of()
-        Period period = Period.between(birthdate,today)
+        LocalDate birthday = LocalDate.of(date1.year,date1.month,date1.day)
+        Period period = Period.between(birthday,today)
         this.age = period.years
     }
-
 }

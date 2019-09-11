@@ -48,7 +48,7 @@
                     <td>${user?.firstName}
                      &nbsp; ${user?.lastName}</td>
                     <td>${user?.email}</td>
-                    <td>${user?.birthdate}</td>
+                    <td>${user?.age}</td>
                     <td>+88${user?.phone}</td>
 
 
