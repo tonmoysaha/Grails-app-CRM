@@ -1,8 +1,9 @@
 package com.bitmascot
 
-import java.text.SimpleDateFormat
+import java.text.ParseException
 import java.time.LocalDate
 import java.time.Period
+import java.time.format.DateTimeFormatter
 
 class User {
     Integer id
@@ -39,17 +40,19 @@ class User {
 
     def beforeInsert (){
         this.password = this.password.encodeAsMD5()
-
-        Date date1 = new SimpleDateFormat("dd/MM/yyyy").parse(this.birthdate)
-        LocalDate today = LocalDate.now()
-        Date currentDate = new SimpleDateFormat("dd/MM/yyyy").parse(today)
-        LocalDate birthday = LocalDate.of(date1.year,date1.month,date1.day)
-        Period period = Period.between(birthday,currentDate)
-        this.age = period.getYears()
     }
 
 
     def beforeUpdate() {
         this.password = this.password.encodeAsMD5()
     }
+
+    def beforeInsertAge() throws ParseException{
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy")
+        LocalDate oldDate = LocalDate.parse(this.birthdate,dateTimeFormatter)
+        LocalDate today = LocalDate.now()
+        Period period = Period.between(oldDate,today)
+        this.age = period.getYears()
+    }
+
 }
