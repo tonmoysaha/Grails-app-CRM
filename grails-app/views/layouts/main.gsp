@@ -10,7 +10,6 @@
     <asset:link rel="icon" href="favicon.ico" type="image/x-ico"/>
     <asset:stylesheet src="application.css"/>
     <asset:javascript src="application.js"/>
-
     <g:layoutHead/>
 </head>
 
@@ -37,10 +36,6 @@
 
         <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">
             <ul class="list-group">
-                <!--
-                <li class="list-group-item"><a href="#">Profile</a></li>
-                <li class="list-group-item"><a href="#">change password</a></li>
-                -->
                 <UIHelper:leftNavigation/>
             </ul>
         </nav>

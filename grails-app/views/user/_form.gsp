@@ -1,6 +1,4 @@
-<div class="text-center" style="padding: 50px 0">
-    <div class="col-sm-6 col-md-4 mx-auto">
-
+<div class="body">
         <g:img dir="images" file="bitmascot.png" class="profile-img"/>
         <h1 class="text-center login-title">Registration panel</h1>
 
@@ -21,6 +19,22 @@
             </div>
         </div>
 
+    <div class="form-group">
+        <label class="col-sm-3 control-label"><g:message code="address"/></label>
+
+        <div class="col-sm-9">
+            <g:textField name="address" class="form-control"/>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-3 control-label"><g:message code="phone"/></label>
+
+        <div class="col-sm-9">
+            <g:textField name="phone" class="form-control"/>
+        </div>
+    </div>
+
 
         <div class="form-group">
             <label class="col-sm-3 control-label"><g:message code="birthdate"/></label>
@@ -32,14 +46,6 @@
                         <span class="glyphicon glyphicon-calendar"></span>
                     </span>
                 </div>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label class="col-sm-3 control-label"><g:message code="address"/></label>
-
-            <div class="col-sm-9">
-                <g:textField name="address" class="form-control"/>
             </div>
         </div>
 
@@ -66,10 +72,10 @@
             </div>
 
             <div class="col-2">
-                <g:link controller="authentication" action="registration" class="btn btn-primary btn-md">Clear</g:link>
+                <g:link controller="authentication" action="login" class="btn btn-primary btn-md">cancel</g:link>
             </div>
         </div>
 
     </div>
-</div>
+
 

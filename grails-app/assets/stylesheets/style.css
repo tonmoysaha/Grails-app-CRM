@@ -1,3 +1,4 @@
+
 body {
     padding-top: 3.5rem;
 }
@@ -10,7 +11,6 @@ h1 {
 
 .sidebar {
     position: fixed;
-    top: 51px;
     bottom: 0;
     left: 0;
     z-index: 1000;
@@ -35,33 +35,29 @@ h1 {
 .sidebar .nav-link {
     border-radius: 0;
 }
-.pass_show{position: relative}
 
-.pass_show .ptxt {
-
-    position: absolute;
-
-    top: 50%;
-
-    right: 10px;
-
-    z-index: 1;
-
-    color: #f36c01;
-
-    margin-top: -10px;
-
-    cursor: pointer;
-
-    transition: .3s ease all;
-
+.action-row{
+    width: 135px;
+    text-align: center;
 }
-.pass_show .ptxt:hover{color: #333333;}
 
 .body {
     margin-top: 40px;
-    margin-left: 50%;
+    margin-left: 35%;
+    width: 40%;
 }
+.resetpasswordbody {
+    margin-top: 40px;
+    margin-left: 40%;
+    width: 40%;
+}
+
+.profilesection {
+    margin-top: 40px;
+    margin-left: 40%;
+    width: 40%;
+}
+
 
 
 

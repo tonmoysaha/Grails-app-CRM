@@ -36,7 +36,7 @@ public static final String AUTHORIZED = "AUTHORIZED";
     }
     def getUserName(){
         def user = getUser()
-        return "${user.firstName} ${user.lastName} ${user.id}"
+        return "${user.firstName} ${user.lastName}"
     }
   
     def isAdministration(){

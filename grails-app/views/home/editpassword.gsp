@@ -9,38 +9,41 @@
 
 
 <div class="card">
-    <div class="card-header">
-        <g:message code="change" class="text-center login-title" args="['Password']"/>
+    <div class="card-header text-center">
+        <g:message code="change.password"/>
     </div>
 
     <div class="card-body ">
 
-                <div class="col-sm-6 col-md-4 mx-auto">
+                <div class="resetpasswordbody">
                     <g:form controller="home" action="updatepassword">
-
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Previous Password</label>
-                            <div class="col-sm-9 ">
+                        <div class="row">
+                            <label class="col-sm">Previous Password</label>
+                            <div class="col-sm">
                                 <g:passwordField name="password" class="form-control"/>
                             </div>
                         </div>
-
+                        </div>
 
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">New Password</label>
-                            <div class="col-sm-9">
+                        <div class="row">
+                            <label class="col-sm">New Password</label>
+                            <div class="col-sm">
                                 <g:passwordField name="newPassword" class="form-control"/>
                             </div>
                         </div>
+                        </div>
 
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Confirm Password</label>
+                        <div class="row">
+                            <label class="col-sm">Confirm Password</label>
 
-                            <div class="col-sm-9">
+                            <div class="col-sm">
                                 <g:passwordField name="confirmPassword" class="form-control"/>
                             </div>
                         </div>
-
+                        </div>
 
                         <div class="row row-space justify-content-center mt-3">
 

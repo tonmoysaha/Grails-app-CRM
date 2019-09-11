@@ -18,10 +18,17 @@
                         <h1 class="text-center login-title">Login panel</h1>
                         <g:form controller="authentication" action="doLogin">
                             <div class="form-group">
-                                <g:textField name="email" class="form-control" placeholder="Enter Email" required="required"/>
+                                <div class="text-center">
+                                    <label><g:message code="email.address"/></label>
+                                </div>
+                                <g:textField name="email" class="form-control" placeholder="Enter Email"
+                                             required="required"/>
                             </div>
 
                             <div class="form-group">
+                                <div class="text-center">
+                                    <label><g:message code="password"/></label>
+                                </div>
                                 <g:passwordField name="password" class="form-control" placeholder="Enter Password"
                                                  required="required"/>
                             </div>
