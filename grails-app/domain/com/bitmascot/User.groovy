@@ -12,7 +12,7 @@ class User {
     String phone
     String address
     String email
-    Integer age
+    Integer age = beforeInsertAge()
     String password
     String userType = GlobalConfig.USER_TYPE.REGULAR_USER
     String identityHash
@@ -23,6 +23,9 @@ class User {
     Date dateCreated
     Date lastUpdated
 
+    User(Integer age) {
+        this.age = beforeInsertAge()
+    }
     static constraints = {
         email(email: true, nullable: false, unique: true, blank: false)
         password(blank: false)
@@ -52,7 +55,8 @@ class User {
         LocalDate oldDate = LocalDate.parse(this.birthdate,dateTimeFormatter)
         LocalDate today = LocalDate.now()
         Period period = Period.between(oldDate,today)
-        this.age = period.getYears()
+        return period.getYears()
+
     }
 
 }
