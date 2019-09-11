@@ -12,7 +12,7 @@ class User {
     String phone
     String address
     String email
-    Integer age = beforeInsertAge()
+    Integer age
     String password
     String userType = GlobalConfig.USER_TYPE.REGULAR_USER
     String identityHash
@@ -23,9 +23,6 @@ class User {
     Date dateCreated
     Date lastUpdated
 
-    User(Integer age) {
-        this.age = beforeInsertAge()
-    }
     static constraints = {
         email(email: true, nullable: false, unique: true, blank: false)
         password(blank: false)
@@ -50,13 +47,5 @@ class User {
         this.password = this.password.encodeAsMD5()
     }
 
-    def beforeInsertAge() throws ParseException{
-        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy")
-        LocalDate oldDate = LocalDate.parse(this.birthdate,dateTimeFormatter)
-        LocalDate today = LocalDate.now()
-        Period period = Period.between(oldDate,today)
-        return period.getYears()
-
-    }
 
 }
