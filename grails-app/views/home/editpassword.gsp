@@ -16,12 +16,12 @@
     <div class="card-body ">
 
                 <div class="resetpasswordbody">
-                    <g:form controller="home" action="updatepassword" >
+                    <g:form name="resetpassword" controller="home" action="updatepassword" >
                         <div class="form-group">
                         <div class="row">
                             <label class="col-sm">Previous Password</label>
                             <div class="col-sm">
-                                <g:passwordField name="password" class="form-control"  required="required"/>
+                                <g:passwordField name="password" id="password" class="form-control"  required="required"/>
                             </div>
                         </div>
                         </div>
@@ -30,7 +30,7 @@
                         <div class="row">
                             <label class="col-sm">New Password</label>
                             <div class="col-sm">
-                                <g:passwordField name="newPassword"  class="form-control"  required="required"/>
+                                <g:passwordField name="newPassword"  id="newPassword" class="form-control"  required="required"/>
                             </div>
                         </div>
                         </div>
@@ -63,4 +63,5 @@
                 </div>
             </div>
         </div>
+
 

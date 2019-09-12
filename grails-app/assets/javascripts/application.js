@@ -11,6 +11,7 @@
 //= require jquery.validate.min
 //= require bootstrap.bundle
 //= require popper.min
+//= require jquery-ui.min
 //= require_self
 
 

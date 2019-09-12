@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $("#editpassword").validate({
+    $("#resetpassword").validate({
         rules: {
             password: "required",
             newPassword: "required",
