@@ -1,9 +1,5 @@
 package com.bitmascot
 
-import java.text.ParseException
-import java.time.LocalDate
-import java.time.Period
-import java.time.format.DateTimeFormatter
 
 class User {
     Integer id
