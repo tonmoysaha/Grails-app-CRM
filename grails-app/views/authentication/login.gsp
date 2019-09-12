@@ -6,7 +6,8 @@
 --%>
 
 <meta name="layout" content="public"/>
-
+<div class="card">
+<div class="card-body">
 <div id="global-wrapper">
     <div id="content-wrapper">
         <div class="container">
@@ -16,12 +17,12 @@
                     <div class="account-wall">
                         <g:img dir="images" file="bitmascot.png" class="profile-img"/>
                         <h1 class="text-center login-title">Login panel</h1>
-                        <g:form controller="authentication" action="doLogin">
+                        <g:form name="loginForm" controller="authentication" action="doLogin">
                             <div class="form-group">
                                 <div class="text-center">
                                     <label><g:message code="email.address"/></label>
                                 </div>
-                                <g:textField name="email" class="form-control" placeholder="Enter Email"
+                                <g:textField name="email" id="email" class="form-control" placeholder="Enter Email"
                                              required="required"/>
                             </div>
 
@@ -29,7 +30,7 @@
                                 <div class="text-center">
                                     <label><g:message code="password"/></label>
                                 </div>
-                                <g:passwordField name="password" class="form-control" placeholder="Enter Password"
+                                <g:passwordField name="password" id="password" class="form-control" placeholder="Enter Password"
                                                  required="required"/>
                             </div>
 
@@ -57,6 +58,6 @@
         </div>
     </div>
 </div>
-
-
+   </div>
+</div>
 

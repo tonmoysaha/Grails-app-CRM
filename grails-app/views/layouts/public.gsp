@@ -8,10 +8,11 @@
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <asset:link rel="icon" href="favicon.ico" type="image/x-ico"/>
-    <asset:stylesheet src="application.css"/>
-    <asset:javascript src="application.js"/>
     <asset:stylesheet src="login.css"/>
     <asset:javascript src="bitmascot.js"/>
+    <asset:javascript src="application.js"/>
+    <asset:stylesheet src="application.css"/>
+    <asset:javascript src="jquery.validate.min.js"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/momentjs/2.14.1/moment.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
