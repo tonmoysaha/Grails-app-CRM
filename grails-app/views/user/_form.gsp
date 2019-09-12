@@ -53,7 +53,7 @@
             <label class="col-sm-3 control-label"><g:message code="email.address"/> *</label>
 
             <div class="col-sm-9">
-                <g:field type="email"  name="email" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" required="required"/>
+                <g:field type="email"  name="email" id="email" class="form-control"  required="required"/>
             </div>
         </div>
 
