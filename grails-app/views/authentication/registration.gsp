@@ -7,7 +7,6 @@
 
 
 <meta name="layout" content="public"/>
-
 <div class="card">
     <div class="card-body">
         <g:form name="signUpForm" nacontroller="authentication" action="doRegistration" class="form-horizontal" role="form">

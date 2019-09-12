@@ -6,7 +6,7 @@
             <label class="col-sm-3 control-label"><g:message code="first.name"/> *</label>
 
             <div class="col-sm-9">
-                <g:textField name="firstName" id="firstName" class="form-control" required="required"/>
+                <g:textField name="firstName"  class="form-control" required="required"/>
             </div>
         </div>
 
@@ -15,7 +15,7 @@
             <label class="col-sm-3 control-label"><g:message code="last.name"/></label>
 
             <div class="col-sm-9">
-                <g:textField name="lastName" id="lastName" class="form-control" required="required"/>
+                <g:textField name="lastName" class="form-control" required="required"/>
             </div>
         </div>
 
@@ -23,7 +23,7 @@
         <label class="col-sm-3 control-label"><g:message code="address"/></label>
 
         <div class="col-sm-9">
-            <g:textField name="address" id="address" class="form-control" required="required"/>
+            <g:textField name="address"  class="form-control" required="required"/>
         </div>
     </div>
 
@@ -31,7 +31,7 @@
         <label class="col-sm-3 control-label"><g:message code="phone"/></label>
 
         <div class="col-sm-9">
-            <g:textField name="phone" id="phone" class="form-control" required="required"/>
+            <g:textField name="phone"  class="form-control" required="required"/>
         </div>
     </div>
 
@@ -41,7 +41,7 @@
 
             <div class="col-sm-9">
                 <div class='input-group date' id='datetimepicker1' data-provide="datepicker">
-                    <g:textField name="birthdate" id="birthdate" class="form-control"/>
+                    <g:textField name="birthdate"  class="form-control"/>
                     <span class="input-group-addon">
                         <span class="glyphicon glyphicon-calendar"></span>
                     </span>
@@ -53,7 +53,7 @@
             <label class="col-sm-3 control-label"><g:message code="email.address"/> *</label>
 
             <div class="col-sm-9">
-                <g:field type="email"  name="email" id="email" class="form-control" required="required"/>
+                <g:field type="email"  name="email" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" required="required"/>
             </div>
         </div>
 
@@ -62,7 +62,7 @@
                 <label class="col-sm-3 control-label"><g:message code="password"/> *</label>
 
                 <div class="col-sm-9">
-                    <g:passwordField name="password" id="password" class="form-control" required="required"/>
+                    <g:passwordField name="password"  class="form-control" required="required"/>
                 </div>
             </div>
 

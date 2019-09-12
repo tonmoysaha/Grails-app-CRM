@@ -21,7 +21,7 @@
                         <div class="row">
                             <label class="col-sm">Previous Password</label>
                             <div class="col-sm">
-                                <g:passwordField name="password" id="password" class="form-control"  required="required"/>
+                                <g:passwordField name="password" id="password" class="form-control" />
                             </div>
                         </div>
                         </div>
@@ -30,7 +30,7 @@
                         <div class="row">
                             <label class="col-sm">New Password</label>
                             <div class="col-sm">
-                                <g:passwordField name="newPassword"  id="newPassword" class="form-control"  required="required"/>
+                                <g:passwordField name="newPassword"  id="newPassword" class="form-control" />
                             </div>
                         </div>
                         </div>
